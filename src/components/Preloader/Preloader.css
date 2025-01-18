@@ -1,0 +1,22 @@
+body[color-theme="light"] .custom-loader {
+    border-right-color: #86b6f6;
+}
+
+body[color-theme="dark"] .custom-loader {
+    border-right-color: #176b87;
+}
+
+.custom-loader {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: #e4e4ed;
+    animation: s2 1s infinite linear;
+}
+@keyframes s2 {
+    to {
+        transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+// --- LIGHT THEME ---
+$btn-light-primary: #86b6f6;
+$btn-light-secondary: #b4d4ff;
+$light-secondary2: #c3dcfc;
+$bg-light: #eef5ff;
+$light-accent: #176b87;
+// --- LIGHT THEME ---
+
+// --- DARK THEME ---
+$btn-dark-primary: #526d82;
+$btn-dark-secondary: #9db2bf;
+$bg-dark: #27374d;
+$dark-accent: #dde6ed;
+// --- DARK THEME ---
+
+//--- MUTUAL VARIABLES ---
+$bodyTransition: background-color 0.5s ease;
+//--- MUTUAL VARIABLES ---
+
+//--- ANSWERS ---
+$correct-text: #386a56;
+$correct-bg: #c6efce;
+
+$incorrect-text: #ac1642;
+$incorrect-bg: #ffc7ce;
+//--- ANSWERS ---
+
+body,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 0 10px;
+    font-size: 16px;
+    transition: $bodyTransition;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+select {
+    color: black;
+}
+select:focus {
+    outline: none;
+}
+
+body[color-theme="light"] {
+    .header .logo {
+        color: #67a7fb;
+    }
+    .btn {
+        border: 1px solid $bg-light;
+    }
+    background-color: $bg-light;
+
+    color: rgb(45, 45, 45);
+
+    .svg--primary path {
+        color: $btn-light-primary;
+    }
+
+    .svg--secondary path {
+        color: $btn-dark-primary;
+    }
+
+    .btn--primary {
+        background-color: $btn-light-primary;
+    }
+    .btn--primary:hover {
+        background-color: transparent;
+        border-color: $btn-light-primary;
+    }
+    .btn--secondary {
+        background-color: $btn-light-secondary;
+    }
+
+    .btn--secondary:hover {
+        background-color: $light-accent;
+        color: $bg-light;
+    }
+    .answers-list__item {
+        border: 2px solid $btn-light-primary;
+    }
+    .answers-list__item.quiz:hover {
+        background-color: $btn-light-secondary;
+    }
+    .quiz__progress {
+        background-color: $btn-light-secondary;
+    }
+    .btn--disabled {
+        background-color: #e4e4e4;
+        color: rgb(178, 178, 178);
+    }
+    .answers-list__item.chosen {
+        background-color: $light-secondary2;
+    }
+    .header-nav-link::after {
+        background-color: whitesmoke;
+    }
+    .results__score {
+        background-color: $btn-light-primary;
+    }
+    .main__background-icon:first-of-type {
+        path {
+            color: $btn-light-primary;
+        }
+    }
+    .main__background-icon:last-of-type {
+        path {
+            color: $btn-light-secondary;
+        }
+    }
+    select {
+        background-color: $light-secondary2;
+        color: $bg-dark;
+    }
+
+    select:focus {
+        -webkit-box-shadow: 1px 0px 8px 6px rgba(180, 212, 255, 0.47);
+        box-shadow: 1px 0px 8px 6px rgba(180, 212, 255, 0.47);
+    }
+    select:focus > option:checked {
+        background-color: $btn-light-primary;
+        color: white;
+    }
+
+    select option {
+        background-color: $bg-light;
+    }
+}
+
+body[color-theme="dark"] {
+    .btn {
+        border: 1px solid $bg-dark;
+    }
+
+    background-color: $bg-dark;
+    color: whitesmoke;
+
+    .svg--primary path {
+        color: $btn-light-primary;
+    }
+
+    .svg--secondary path {
+        color: $btn-light-secondary;
+    }
+    .btn--primary {
+        color: $bg-dark;
+        background-color: $btn-dark-secondary;
+    }
+
+    .btn--primary:hover {
+        border-color: $bg-light;
+        color: $bg-light;
+        background-color: transparent;
+    }
+    .btn--secondary {
+        background-color: $btn-dark-primary;
+        color: $dark-accent;
+    }
+    .btn--secondary:hover {
+        background-color: $light-accent;
+    }
+    .answers-list__item {
+        border: 2px solid $light-accent;
+    }
+    .answers-list__item.quiz:hover {
+        background-color: $btn-dark-secondary;
+        color: $bg-dark;
+    }
+    .quiz__progress {
+        background-color: $light-accent;
+    }
+    .btn--disabled {
+        background-color: $btn-dark-primary;
+        color: $btn-dark-secondary;
+    }
+    .answers-list__item.chosen {
+        background-color: $btn-dark-primary;
+    }
+
+    .header-nav-link::after {
+        background-color: whitesmoke;
+    }
+
+    .results__score {
+        background-color: $btn-dark-primary;
+    }
+    .main__background-icon:first-of-type {
+        path {
+            color: $btn-dark-secondary;
+        }
+    }
+    .main__background-icon:last-of-type {
+        path {
+            color: $btn-dark-primary;
+        }
+    }
+    select {
+        background-color: $btn-dark-primary;
+        color: $bg-light;
+    }
+    select:focus {
+        -webkit-box-shadow: 1px 0px 8px 6px rgba(180, 212, 255, 0.24);
+        box-shadow: 1px 0px 8px 6px rgba(180, 212, 255, 0.24);
+    }
+
+    select:focus > option:checked {
+        background-color: $btn-dark-secondary;
+        color: black;
+    }
+    select option {
+        background-color: $bg-dark;
+        color: $bg-light;
+    }
+}
+.main__background-icon {
+    position: absolute;
+    z-index: -1;
+}
+.main__background-icon:first-of-type {
+    top: -50%;
+    rotate: -10deg;
+    left: -50%;
+    height: 20rem;
+    width: 20rem;
+
+    opacity: 65%;
+}
+.main__background-icon:last-of-type {
+    top: -45%;
+    rotate: 35deg;
+    right: -30%;
+    height: 12rem;
+    opacity: 70%;
+    width: 12rem;
+}
+
+.answer_incorrect {
+    background-color: $incorrect-bg;
+    color: $incorrect-text;
+}
+
+.answer_correct {
+    background-color: $correct-bg;
+    color: $correct-text;
+    border: 2px solid $incorrect-text;
+}
+
+@media screen and (max-width: 450px) {
+    .results__score {
+        flex-grow: 1;
+    }
+
+    .results__score:first-of-type > div {
+        justify-content: center;
+    }
+}
