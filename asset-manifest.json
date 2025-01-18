@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/danteasy/react-quiz/static/css/main.3bda4684.css",
-    "main.js": "/danteasy/react-quiz/static/js/main.c2917715.js",
+    "main.js": "/danteasy/react-quiz/static/js/main.a260ee8f.js",
     "index.html": "/danteasy/react-quiz/index.html",
     "main.3bda4684.css.map": "/danteasy/react-quiz/static/css/main.3bda4684.css.map",
-    "main.c2917715.js.map": "/danteasy/react-quiz/static/js/main.c2917715.js.map"
+    "main.a260ee8f.js.map": "/danteasy/react-quiz/static/js/main.a260ee8f.js.map"
   },
   "entrypoints": [
     "static/css/main.3bda4684.css",
-    "static/js/main.c2917715.js"
+    "static/js/main.a260ee8f.js"
   ]
 }
