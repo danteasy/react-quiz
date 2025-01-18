@@ -23,7 +23,7 @@ function App() {
     return (
         <>
             <ThemeContextProvider>
-                <Router>
+                <Router basename="/react-quiz">
                     <Container>
                         <Routes>
                             <Route path="/" element={<Main />} />
